@@ -107,7 +107,7 @@ span{
 .home-img img{
     position: relative;
     top: 3rem;
-    width: 32vw;
+    width: 35vw;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
@@ -175,23 +175,23 @@ span{
 @keyframes words{
     0%,
     20%{
-        content: "Backend Developer";
+        content: "Desenvolvedor Back-End";
     }
     21%,
     40%{
-        content: "Web Developer";
+        content: "Desenvolvedor Java";
     }
     41%,
     60%{
-        content: "Software Tester";
+        content: "Estudante de Ciência da Computação";
     }
     61%,
     80%{
-        content: "College Student";
+        content: "Entusiasta de Tecnologia";
     }
     81%,
     100%{
-        content: "Problem Solver";
+        content: "Resolvedor de Problemas";
     }
 }
 @keyframes typing{
