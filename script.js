@@ -23,3 +23,14 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
+
+/*Correção*/
+navLinks.forEach(link => {
+link.addEventListener(
+'click', () => {
+navbar.classList
+.remove('active');
+menuIcon.classList
+.remove('bx-x');
+});
+});

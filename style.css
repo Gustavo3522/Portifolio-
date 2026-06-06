@@ -156,7 +156,7 @@ span{
 .text-animation{
     font-size: 34px;
     font-weight: 600;
-    min-width: 650px; 
+    max-width: 100%;       /*Correção*/
 }
 .text-animation span{
     position: relative;
@@ -183,7 +183,6 @@ span{
     }
 
 }
-
 @keyframes words{
     0%,
     20%{
@@ -232,8 +231,6 @@ span{
     }
     
 }
-
-
 
 .heading{
     font-size: 8rem;
@@ -358,11 +355,10 @@ span{
     border: 5px solid var(--main-color);
     transform: scale(1.03);
 }
-.service-box .services-info{
+.service-box .service-info{
     display: flex;
     flex-direction: column;
     text-align: left;
-    max-height: 200px;
     justify-content: left;
     align-items: baseline;
     padding: 5rem 5rem;
@@ -382,7 +378,6 @@ span{
     padding: 20px;
 }
 
-/* testimonials inicio*/
 .testimonials{
     background: var(--second-bg-color);
 }
@@ -541,6 +536,7 @@ span{
         grid-template-columns: repeat(2,1fr);
         margin: 0 5rem;
     }
+    .home{ gap: 5rem;} /*Correção*/
 }
 @media (max-width: 991px){
     header{
@@ -610,7 +606,7 @@ span{
         font-size: 2.6rem;
     }
     .home-content h1{
-        font-size: 8rem;
+        font-size: 4.5rem;  /*Correção*/
         margin-top: 3rem;
     }
     .home-content p{
@@ -618,7 +614,7 @@ span{
         margin: 0 auto;
     }
     .home-img img{
-        width: 56vw;
+        width: min (56vw, 280px);  /*Correção*/
     }
     .services h2{
         margin-bottom: 3rem;
@@ -626,4 +622,19 @@ span{
     .services-container{
         grid-template-columns: repeat(1,1fr);
     }
+
+    @media (max-width: 480px){
+    .heading{
+        font-size: 5rem;
+    }
+    .home-content h1{
+        font-size: 3.5rem;
+    }
+    .home-content h3{
+        font-size: 2rem;
+    }
+    section{
+        padding: 8rem 4% 2rem;
+    }
+}
 }
