@@ -23,6 +23,12 @@
     --main-color:#34f5b5;
     
 }
+body.light-mode{
+    --bg-color: #f5f5f5;
+    --second-bg-color: #e0e0e0;
+    --text-color: #1a1a1a;
+    --main-color: #00a87a;
+}
 html{
     font-size: 60%;
     overflow-x: hidden;
@@ -74,6 +80,15 @@ body{
     font-size: 3.6rem;
     color: var(--main-color);
     display: none;
+}
+#theme-icon{
+    font-size: 3.6rem;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+#theme-icon:hover{
+    transform: scale(1.2) rotate(20deg);
 }
 section{
     min-height: 100vh;
@@ -285,7 +300,7 @@ span{
 .timeline-date{
     font-size: 20px;
     font-weight: 800;
-    color: white;
+    color: var(--text-color);
     margin: 6px 0 15px;
 }
 .timeline-content{
@@ -303,13 +318,13 @@ span{
 }
 .timeline-content h3{
     font-size: 20px;
-    color: white;
+    color: var(--text-color);
     marker-start: 0 0 10px;
     font-weight: 500;
     padding-bottom: 15px;
 }
 .timeline-content p{
-    color: white;
+    color: var(--text-color);
     font-size: 16px;
     font-weight: 300;
     line-height: 22px;
@@ -330,7 +345,7 @@ span{
 }
 .services h2{
     margin-bottom: 5rem;
-    color: white;
+    color: var(--text-color);
 }
 .services-container{
     display: grid;
@@ -436,7 +451,7 @@ span{
 }
 .contact h2{
     margin-bottom: 3rem;
-    color: white;
+    color: var(--text-color);
 }
 .contact form{
     display: flex;
@@ -501,7 +516,7 @@ span{
     margin-top: 50px;
     text-align: center;
     font-size: 16px;
-    color: white;
+    color: var(--text-color);
 }
 .btn{
     display: inline-block;
@@ -521,7 +536,6 @@ span{
     transform: scale(1.05);
     box-shadow: 0 0 50px var(--main-color);
 }
-
 .skills{
     background: var(--second-bg-color);
 }
@@ -572,7 +586,6 @@ span{
     transition: width 1s ease-in-out;
     box-shadow: 0 0 10px var(--main-color);
 }
-
 @media (max-width: 1285px){
     html{
         font-size: 55%;
@@ -619,11 +632,9 @@ span{
     }
 }
 @media (max-width:895px){
-
     .skills-container{
         grid-template-columns: repeat(1, 1fr);
     }
-
     #menu-icon{
         display: block;
     }
@@ -674,7 +685,6 @@ span{
         grid-template-columns: repeat(1,1fr);
     }
 }
-
     @media (max-width: 480px){
     .heading{
         font-size: 5rem;
@@ -688,5 +698,4 @@ span{
     section{
         padding: 8rem 4% 2rem;
     }
-}
 }

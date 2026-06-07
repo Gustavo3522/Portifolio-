@@ -47,3 +47,20 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 
 skillPers.forEach(skill => observer.observe(skill));
+const themeIcon = document.querySelector('#theme-icon');
+
+if(localStorage.getItem('theme') === 'light'){
+    document.body.classList.add('light-mode');
+    themeIcon.classList.replace('bx-sun', 'bx-moon');
+}
+themeIcon.onclick = () => {
+    document.body.classList.toggle('light-mode');
+
+    if(document.body.classList.contains('light-mode')){
+        themeIcon.classList.replace('bx-sun', 'bx-moon');
+        localStorage.setItem('theme', 'light');
+    } else {
+        themeIcon.classList.replace('bx-moon', 'bx-sun');
+        localStorage.setItem('theme', 'dark');
+    }
+}
