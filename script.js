@@ -34,3 +34,16 @@ menuIcon.classList
 .remove('bx-x');
 });
 });
+
+const skillPers = document.querySelectorAll('.skill-per');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            const per = entry.target.getAttribute('data-per');
+            entry.target.style.width = per + '%';
+        }
+    });
+}, { threshold: 0.3 });
+
+skillPers.forEach(skill => observer.observe(skill));
